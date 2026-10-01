@@ -24,6 +24,7 @@ Plataforma web orientada a la digitalización, seguimiento y registro de pausas 
 
 ##  Estructura del Directorio
 
+```text
 pactivasdigitales/
 ├── static/
 │   ├── css/
@@ -45,13 +46,15 @@ pactivasdigitales/
 ├── .env.example
 ├── .gitignore
 └── README.md
+```
 
 
 ##  Guía de Ejecución Local
 
 1. Clonar el repositorio:
    git clone https://github.com/Edrianescobar580/pactivasdigitales.git
-   cd pactivasdigitales
+   
+   -> cd pactivasdigitales
 
 2. Crear y activar un entorno virtual (recomendado):
    python -m venv venv
