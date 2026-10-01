@@ -1,16 +1,13 @@
-# Entorno virtual de Python
-venv/
-env/
+# Variables de entorno con claves
+.env
+
+# Archivos de Excel generados en tiempo de ejecución
+*.xlsx
+
+# Archivos de caché de Python
 __pycache__/
 *.pyc
 
-# Variables de entorno y credenciales
-.env
-
-# Archivos de datos generados en runtime
-*.xlsx
-*.sqlite3
-
-# IDEs
-.vscode/
-.idea/
+# Entornos virtuales
+venv/
+env/
