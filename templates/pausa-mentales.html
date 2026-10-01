@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pausas Cognitivas y Mentales | ActiveBreak</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+
+    <body class="bg-light pausas-mentales">
+        <div class="container py-4">
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <a href="{{ url_for('index') }}" class="btn btn-outline-secondary btn-sm">
+                    <i class="fas fa-arrow-left mr-1"></i> Volver al Inicio
+                </a>
+                {% if empleado %}
+                <span class="badge badge-pill badge-primary px-3 py-2">
+                    <i class="fas fa-user mr-1"></i> {{ empleado['nombre'] }}
+                </span>
+                {% endif %}
+            </div>
+
+            <div class="text-center mb-5">
+                <h2 class="font-weight-bold text-dark">
+                    <i class="fas fa-brain text-info mr-2"></i>Dinámicas de Agilidad Mental
+                </h2>
+                <p class="text-muted">Desconéctate de la rutina por 5 minutos y ejercita tu concentración con estos desafíos interactivos.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+                        <div class="my-3">
+                            <span class="fa-stack fa-2x">
+                                <i class="fas fa-circle fa-stack-2x text-light"></i>
+                                <i class="fas fa-search fa-stack-1x text-success"></i>
+                            </span>
+                        </div>
+                        <div class="card-body p-2 d-flex flex-column justify-content-between">
+                            <div>
+                                <h4 class="font-weight-bold text-dark mb-2">Sopa de Letras</h4>
+                                <span class="badge badge-success mb-3">Atención & Enfoque</span>
+                                <p class="text-muted small">Rastrea y localiza términos clave de bienestar y salud en una cuadrícula interactiva.</p>
+                            </div>
+                            <a href="{{ url_for('pausa_mental_sopaletras') }}" class="btn btn-outline-success btn-block mt-3 font-weight-bold">
+                                <i class="fas fa-play mr-1"></i> Iniciar Desafío
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+                        <div class="my-3">
+                            <span class="fa-stack fa-2x">
+                                <i class="fas fa-circle fa-stack-2x text-light"></i>
+                                <i class="fas fa-puzzle-piece fa-stack-1x text-warning"></i>
+                            </span>
+                        </div>
+                        <div class="card-body p-2 d-flex flex-column justify-content-between">
+                            <div>
+                                <h4 class="font-weight-bold text-dark mb-2">Rompecabezas</h4>
+                                <span class="badge badge-warning text-dark mb-3">Lógica Espacial</span>
+                                <p class="text-muted small">Reorganiza las secciones del lienzo interactivo sobre Canvas hasta reconstruir la figura objetivo.</p>
+                            </div>
+                            <a href="{{ url_for('rompecabezas') }}" class="btn btn-outline-warning text-dark btn-block mt-3 font-weight-bold">
+                                <i class="fas fa-play mr-1"></i> Iniciar Desafío
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm border-0 text-center p-3">
+                        <div class="my-3">
+                            <span class="fa-stack fa-2x">
+                                <i class="fas fa-circle fa-stack-2x text-light"></i>
+                                <i class="fas fa-clone fa-stack-1x text-info"></i>
+                            </span>
+                        </div>
+                        <div class="card-body p-2 d-flex flex-column justify-content-between">
+                            <div>
+                                <h4 class="font-weight-bold text-dark mb-2">Memorama</h4>
+                                <span class="badge badge-info mb-3">Memoria Visual</span>
+                                <p class="text-muted small">Encuentra y empareja todas las tarjetas idénticas en el menor tiempo y número de intentos posible.</p>
+                            </div>
+                            <a href="{{ url_for('pausa_mental_memorama') }}" class="btn btn-outline-info btn-block mt-3 font-weight-bold">
+                                <i class="fas fa-play mr-1"></i> Iniciar Desafío
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left mr-1"></i> Volver a la Selección General
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Scripts de Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>
